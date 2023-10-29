@@ -82,9 +82,9 @@ const Jobs = () => {
                 .map((item) => {
                   return (
                     <Link key={item.job_id} to={`/job/${item.job_id}`}>
-                      <div className="job-card grid w-[100%] h-44 bg-white shadow-sm m-2 px-5 py-4 hover:bg-gray-100 transition-all duration-500 ">
-                        <div className="flex  max-h-[50px] justify-between border-b-2 pb-2">
-                          <h5 className="text-xl text-green-500">
+                      <div className="job-card grid w-[100%] h-auto lg:h-44 bg-white shadow-sm m-2 px-5 py-4 hover:bg-gray-100 transition-all duration-500 ">
+                        <div className="grid h-auto py-auto px-5 lg:flex  lg:max-h-[50px] justify-between border-b-2 pb-2">
+                          <h5 className="text-xl text-green-500 mb-2 md:mb-0 lg:mb-0">
                             {item.job_title.slice(0, 50)}
                           </h5>
                           <div className="job-btn flex gap-5">
@@ -98,7 +98,7 @@ const Jobs = () => {
                             </span>
                           </div>
                         </div>
-                        <div className="pt-2 text-gray-500">
+                        <div className="px-5 pt-2 text-gray-500">
                           {item.job_summary.slice(0, 300) + "..."}
                         </div>
                       </div>

@@ -49,22 +49,26 @@ const JobsDetails = () => {
           </Link>
         </div>
         <div className="max-w-[800px] lg:m-auto gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pt-10">
-          <article className="prose lg:prose-xl p-7">
-            <h6>
+          <article className="prosed lg:prose-xxl p-7 bg-white border-2">
+            <h5>
               {" "}
-              <b>Position:</b> {data.job_title}
-            </h6>
+              <b>Position:</b>&nbsp;
+              {data.job_title}
+            </h5>
+            <br />
             <b>SUMMARY:</b> <br />
             {data.job_summary}
-            <h6>
+            <br />
+            <br />
+            <h5>
               {" "}
               <b>Location:</b> {data.job_location}
-            </h6>
+            </h5>
             <br />
-            <h6>
+            <h5>
               {" "}
               <b>ESSENTIAL DUTIES AND RESPONSIBILITIES: </b>
-            </h6>
+            </h5>
             {parse(data.job_responsibility)}
             <br /> <br />
             <h5>
